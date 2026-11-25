@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
-import { planes } from "../data/planes";
+import { planesSalud } from "../data/planes";
 
 export default function PlanesPage() {
   return (
@@ -22,7 +22,7 @@ export default function PlanesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
-          {planes.map((plan) => (
+          {planesSalud.map((plan) => (
             <Card
               key={plan.id}
               bgColor={plan.bgColor}
@@ -32,7 +32,7 @@ export default function PlanesPage() {
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className={`px-3 py-1 ${plan.badgeBg} ${plan.badgeText} border-2 border-black font-black text-xs uppercase`}>
+                  <span className={`px-3 py-1 ${plan.tagBg || ""} border-2 border-black font-black text-xs uppercase`}>
                     {plan.badge}
                   </span>
                   <span className={`font-black text-xs ${plan.codeColor}`}>{plan.code}</span>
@@ -43,7 +43,7 @@ export default function PlanesPage() {
                   <span className={`text-xs font-bold ${plan.periodColor}`}>{plan.period}</span>
                 </div>
                 <ul className="mt-4 flex flex-col gap-1.5 text-xs font-bold">
-                  {plan.features.map((feat) => (
+                  {plan.benefits.map((feat) => (
                     <li key={feat}>✓ {feat}</li>
                   ))}
                 </ul>

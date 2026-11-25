@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import { tecnologiaItems } from "../data/tecnologia";
+import { bloquesTecnologia } from "../data/tecnologia";
 
 export default function TecnologiaPage() {
   return (
@@ -38,7 +38,7 @@ export default function TecnologiaPage() {
           </div>
 
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            {tecnologiaItems.map((item) => (
+            {bloquesTecnologia.map((item) => (
               <Card key={item.id} bgColor={item.bgColor} shadow="shadow-[5px_5px_0px_0px_#000]" className="p-4">
                 <span className="font-black text-2xl">{item.number}</span>
                 <h3 className="font-black text-sm uppercase mt-1">{item.title}</h3>
