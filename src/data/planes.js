@@ -1,0 +1,45 @@
+export const planesSalud = [
+  {
+    id: "esencial",
+    name: "Esencial",
+    price: "$29",
+    period: "/ mes",
+    bgColor: "bg-[#72EFDD]",
+    tagBg: "bg-white",
+    featured: false,
+    benefits: [
+      "Consultas generales ilimitadas",
+      "Telemedicina 24/7",
+      "20% dto. en laboratorio",
+    ],
+  },
+  {
+    id: "familiar",
+    name: "Familiar",
+    price: "$59",
+    period: "/ mes",
+    bgColor: "bg-[#FFD600]",
+    tagBg: "bg-[#FF4D6D] text-white",
+    badge: "Popular",
+    featured: true,
+    benefits: [
+      "Hasta 4 integrantes",
+      "Pediatría y Odontología incluidas",
+      "Urgencias 24H sin copago",
+    ],
+  },
+  {
+    id: "preventivo",
+    name: "Preventivo+",
+    price: "$45",
+    period: "/ mes",
+    bgColor: "bg-[#C8B6FF]",
+    tagBg: "bg-white",
+    featured: false,
+    benefits: [
+      "Chequeo anual completo",
+      "Cardiología y Oftalmología",
+      "Análisis clínicos incluidos",
+    ],
+  },
+];
